@@ -1,0 +1,299 @@
+html {
+  mix-blend-mode: normal;
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 16.27%,
+      rgba(0, 0, 0, 0.4) 99.99%,
+      rgba(94, 124, 150, 0.4) 100%
+    ),
+    #121212;
+  overflow-x: hidden;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.89);
+}
+
+/*Navigation bar*/
+.navbar {
+  position: fixed;
+  width: 100%;
+  background-color: 000000;
+  height: 49px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 2;
+}
+
+.left {
+  display: flex;
+  flex-direction: row;
+}
+
+#burger {
+  display: none;
+  color: ffffff;
+  padding-left: 10px;
+  height: 37px;
+  width: 40px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.navbar a {
+  color: ffffff;
+}
+
+.lato {
+  padding-right: 10px;
+}
+.logo {
+  padding-left: 10px;
+  font-family: "ZCOOL KuaiLe";
+  font-size: 40px;
+}
+
+.lato img {
+  width: 35px;
+  height: 35px;
+}
+
+/*Page header*/
+
+header {
+  padding-top: 49px;
+}
+
+h1 {
+  font-family: "Livvic", sans-serif;
+  font-size: 5vw;
+  color: dbd6b3;
+  text-align: center;
+}
+
+#bottone {
+  width: 15vw;
+  height: 4vw;
+}
+
+.imm {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  background-image: url(image/Header_provvisorio.jpg);
+  background-position: center;
+  background-size: cover;
+  height: 38vw;
+  z-index: 1;
+}
+
+.overlay {
+  background-color: rgba(0, 0, 0, 0.3);
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+}
+
+/*Page section*/
+section {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px;
+  width: 100%;
+}
+
+/*left menù*/
+
+.menu {
+  display: flex;
+  flex-flow: column;
+  background-color: 000;
+  height: 500px;
+  margin: 0;
+  padding: 0;
+  margin-top: 180px;
+  margin-left: 30px;
+  padding-left: 10px;
+}
+
+.menu span {
+  margin: 30px 0;
+  font-size: 1.3rem;
+  font-family: "Livvic", sans-serif;
+  width: 200px;
+}
+
+/*Right content*/
+.card,
+.text {
+  display: flex;
+  flex-flow: column;
+}
+
+.text {
+  text-align: center;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.card {
+  background: linear-gradient(
+    180deg,
+    transparent 0,
+    rgba(0, 0, 0, 0.4) 25%,
+    rgba(0, 0, 0, 0.65),
+    rgba(0, 0, 0, 0.85) 75%,
+    #000
+  );
+}
+
+.box1::-webkit-scrollbar {
+  display: none;
+}
+
+.box1 {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  overflow-x: auto;
+  max-width: 1000px;
+  margin: 40px 10px;
+}
+
+.card img {
+  width: 200px;
+  height: 300px;
+  margin: 10px;
+}
+
+/*advertising banners */
+
+.banner {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  align-items: center;
+}
+
+#banner1 {
+  width: 80vw;
+  height: 46vw;
+  margin-top: 50px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.9);
+  border-radius: 1.5px;
+}
+#banner2 {
+  width: 75vw;
+  height: 46vw;
+  margin: 60px 0;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.9);
+  border-radius: 1.5px;
+}
+
+/*page footer */
+
+footer {
+  background-color: 000;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
+
+.footer_content,
+.address {
+  display: flex;
+  flex-flow: column;
+  align-items: flex-end;
+}
+
+#unict {
+  width: 300px;
+  height: 110px;
+}
+
+.footer_content img {
+  width: 35px;
+  height: 35px;
+  margin: 5px;
+}
+
+/*mobile rulers*/
+
+@media only screen and (max-width: 700px) {
+  .menu {
+    display: none;
+  }
+
+  #burger {
+    display: inline-block;
+  }
+
+  .box1 {
+    flex-wrap: nowrap;
+  }
+
+  .address {
+    font-size: 2.6vw;
+  }
+
+  h1 {
+    font-size: 7vw;
+  }
+
+  #bottone {
+    width: 25vw;
+    height: 7vw;
+  }
+
+  footer {
+    height: 20vw;
+  }
+
+  #unict {
+    width: 35vw;
+    height: 15vw;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .address {
+    display: none;
+  }
+
+  .footer_content img {
+    width: 10vw;
+    height: 10vw;
+  }
+
+  .lato img {
+    width: 8vw;
+    height: 8vw;
+  }
+
+  #burger {
+    width: 8vw;
+    height: 8vw;
+  }
+
+  .logo {
+    font-size: 8vw;
+  }
+
+  .card img {
+    width: 127px;
+    height: 198px;
+  }
+
+  .txt {
+    font-size: 13px;
+  }
+}
